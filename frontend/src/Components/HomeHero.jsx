@@ -32,7 +32,7 @@ function HomeHero({ query2,fetchLoggedinUser }) {
   }
 
   function handleShare(id, index) {
-    setSelectedPostUrl(`http://localhost:5173/post/${id}`);
+    setSelectedPostUrl(`https://social-media-clone-using-mern-stack-7wqf.onrender.com/post/${id}`);
     let newshowShareOptions = [...showShareOptions];
     newshowShareOptions[index] = true;
     setShowShareOptions(newshowShareOptions);
