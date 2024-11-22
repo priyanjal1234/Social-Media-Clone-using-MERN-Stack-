@@ -1,6 +1,7 @@
 import React from "react";
 
 function ShareOptions({ postUrl, onClose }) {
+  console.log(postUrl)
   function handleShare(platform) {
     let sharedUrl = "";
 
