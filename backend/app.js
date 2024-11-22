@@ -19,7 +19,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://social-media-clone-using-mern-stack-7wqf.onrender.com',
     credentials: true
 }))
 
