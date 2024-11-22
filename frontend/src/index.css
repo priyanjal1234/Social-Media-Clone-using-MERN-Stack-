@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.homehero {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  /* background-color: orange; */
+}
