@@ -148,7 +148,7 @@ module.exports.forgotPasswordController = async function (req, res) {
     let resettoken = crypto.randomBytes(16).toString("hex");
     user.resetPasswordToken = resettoken;
     await user.save();
-    let resetUrl = `http://localhost:5173/reset-password/${resettoken}`;
+    let resetUrl = `https://social-media-clone-using-mern-stack-7wqf.onrender.com/reset-password/${resettoken}`;
     res.status(200).json({ resetUrl, resettoken });
   } catch (error) {
     res.status(500).json({ errorMessage: error.message });
