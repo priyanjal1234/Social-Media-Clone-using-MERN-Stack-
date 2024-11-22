@@ -13,12 +13,14 @@ router.post(
   createPostController
 );
 
+router.get("/post/:id",getSpecificPostController)
+
+
 router.get("/all-posts",getAllPostsController)
 
 router.post("/post/like/:id",isLoggedin,likePostController)
 
 router.delete("/delete/:id",isLoggedin,deletePostController)
 
-router.get("/post/:id",getSpecificPostController)
 
 module.exports = router;
