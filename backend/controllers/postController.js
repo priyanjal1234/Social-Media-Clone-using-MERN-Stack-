@@ -1,5 +1,6 @@
 const postModel = require("../models/post-model");
 const userModel = require("../models/user-model");
+const commentModel = require("../models/comment-model");
 
 module.exports.createPostController = async function (req, res) {
   let { caption } = req.body;
