@@ -73,9 +73,11 @@ module.exports.deletePostController = async function (req, res) {
     user.posts = user.posts.filter(
       (id) => id.toString() !== posttobedeleted._id.toString()
     );
+
+     await user.save();
     await commentModel.deleteMany({post: posttobedeleted._id})
     
-    await user.save();
+   
     let deletedPost = await postModel.findOneAndDelete({
       _id: req.params.id,
       user: user._id,
