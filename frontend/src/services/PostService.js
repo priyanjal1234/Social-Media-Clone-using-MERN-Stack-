@@ -8,8 +8,12 @@ export const createPost = async function (formdata) {
     });
     return createPostRes;
   } catch (error) {
+    
     if (error.response && error.response.status === 500) {
       toast.error("Error Creating Post");
+    }
+    else if(error.response && error.response.status === 401) {
+      toast.error("You have to upload atleast one image")
     }
   }
 };
