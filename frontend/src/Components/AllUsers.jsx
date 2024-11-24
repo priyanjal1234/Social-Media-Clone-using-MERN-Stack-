@@ -54,7 +54,7 @@ function AllUsers() {
           >
             <div className="w-[50px] h-[50px] overflow-hidden rounded-full">
               {User?.profilePicture ? (
-                <img src={User?.profilePicture} alt="Profile" />
+                <img className = "w-full h-full object-cover" src={User?.profilePicture} alt="Profile" />
               ) : (
                 <img
                   className="w-full h-full object-cover"
