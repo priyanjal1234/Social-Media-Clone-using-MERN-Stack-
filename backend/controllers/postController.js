@@ -11,6 +11,10 @@ module.exports.createPostController = async function (req, res) {
       ? req.files["images"].map((file) => file.path)
       : [];
 
+    if(images === []) {
+      return res.status(401).json({message: "You have to upload some image" })
+    }
+
     let post = await postModel.create({
       caption,
       user,
